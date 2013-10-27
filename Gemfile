@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
+
 gem 'rails', '4.0.0'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
@@ -15,19 +16,27 @@ gem 'devise_invitable'
 gem 'figaro'
 gem 'rolify'
 gem 'simple_form', '>= 3.0.0.rc'
+gem 'gibbon'
 gem 'thin'
 gem 'zurb-foundation'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'hub', :require=>nil
   gem 'quiet_assets'
 end
+
 group :development, :test do
   gem 'rspec-rails'
 end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner', '1.0.1'
   gem 'email_spec'
+end
+
+group :production do
+	gem 'pg'
 end

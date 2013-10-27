@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-PlessBootstrap::Application.config.secret_key_base = '0a8ea8bd7d70ca4cee8488a29fb767b1b2a9979c52873c34d263a7cefcb1e912b45e4fab818a86e725e018c2bc72c742fb1c5b4b96a1f86150312f904c29a473'
+PlessBootstrap::Application.config.secret_key_base = 'c44e464a69373ceae37562c3a5a616024b90e867314d24b42094890cd044cba7e60b826690aa7ee671e7acae8a2a0dcb92efbab25d8f66c634d7a0235a1ead2c'

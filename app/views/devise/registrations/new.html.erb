@@ -1,11 +1,24 @@
-<h2>Sign up</h2>
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
-  <%= f.error_notification %>
-  <%= display_base_errors resource %>
-  <%= f.input :name, :autofocus => true %>
-  <%= f.input :email, :required => true %>
-  <%= f.input :password, :required => true %>
-  <%= f.input :password_confirmation, :required => true %>
-  <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
-<% end %>
-<%= render "devise/shared/links" %>
+<!-- Begin main Above the fold Header -->
+<div class="full-row grey wrapper_signup">
+
+<div class="row">
+  <div class="small-4 small-centered columns">
+	<h2>Sign up</h2>
+	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
+	  <%= f.error_notification %>
+	  <%= display_base_errors resource %>
+	  <%= f.input :name,  :label => false, :autofocus => true, :placeholder => "Your name" %>
+	  <%= f.input :email,  :label => false, :required => true, :placeholder => "Email address" %>
+	  <%= f.input :password,  :label => false, :required => true, :placeholder => "Password" %>
+	  <%= f.input :password_confirmation,  :label => false, :required => true, :placeholder => "Password confirmation" %>
+	  <%= f.button :submit, 'Get started', :class => 'button success full_width' %>
+	<% end %>
+		<div class="link_white">
+
+		<%= render "devise/shared/links" %>
+	</div>
+
+  </div>
+</div>
+
+</div>
