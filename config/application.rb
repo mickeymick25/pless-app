@@ -41,5 +41,10 @@ module PlessBootstrap
     # So False to enable message ; True to activate quiet_assets
     config.quiet_assets = true
     
+    #================
+    # Rails 12factor
+    #================
+    config.serve_static_assets = true
+    
   end
 end
