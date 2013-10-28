@@ -12,10 +12,6 @@ module PlessBootstrap
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
       g.test_framework :rspec
-      
-      
-      
-      
       g.view_specs false
       g.helper_specs false
     end
@@ -37,6 +33,13 @@ module PlessBootstrap
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
+
+    #================
+    # Quiet Assets
+    #================
+    # Simply installing Quiet Assets will suppress the log messages automatically. 
+    # So False to enable message ; True to activate quiet_assets
+    config.quiet_assets = true
     
   end
 end
