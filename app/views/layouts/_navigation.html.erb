@@ -26,6 +26,7 @@
         <% if user_signed_in? %>
         <li class="has-dropdown">
           <a href="#"><%= current_user.name %></a>
+          
           <ul class="dropdown">
             <li><a href="#">Dashboard</a></li>
             <li><%= link_to 'Account', edit_user_registration_path %></li>
@@ -38,6 +39,7 @@
             <!-- <li class="divider"></li> -->
             <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
           </ul>
+          
         </li>
         <% else %>
 
