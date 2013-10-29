@@ -1,6 +1,8 @@
 <!-- Navigation starts
 ================================================== -->
-<nav class="top-bar"> 
+<div class="contain-to-grid">
+
+  <nav class="top-bar"> 
     <ul class="title-area">
       <!-- Title Area -->
       <li class="name">
@@ -14,18 +16,18 @@
       <ul class="right">
 
         <!-- <li class="divider"></li> -->
-        <li><a href="">Presentation</a></li>
+        <li><a href="#">Presentation</a></li>
         <!-- <li class="divider"></li> -->
-        <li><a href="">Essayer</a></li>
+        <li><a href="#">Essayer</a></li>
         <!-- <li class="divider"></li> -->
-        <li><a href="">Applications</a></li>
+        <li><a href="#">Applications</a></li>
         <!-- <li class="divider"></li> -->
-        <li><a href="">Blog</a></li>
+        <li><a href="#">Blog</a></li>
         <!-- <li class="divider"></li> -->
 
         <% if user_signed_in? %>
         <li class="has-dropdown">
-          <a href=""><%= current_user.name %></a>
+          <a href="#"><%= current_user.name %></a>
           
           <ul class="dropdown">
             <li><a href="">Dashboard</a></li>
@@ -50,6 +52,9 @@
         <% end %>
       </ul>
     </section>
-</nav>
+
+  </nav>
+</div>
+
 <!-- Navigation End
 ================================================== -->
