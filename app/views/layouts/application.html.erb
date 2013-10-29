@@ -41,7 +41,7 @@
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
 
-    <%= render 'layouts/google_analytics' %>
+    
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
@@ -60,7 +60,7 @@
       <!-- Footer
       ================================================== -->
       <footer>
-        
+        <%= render 'layouts/google_analytics' %>
       </footer>
     </div>
   <!-- End of Body
