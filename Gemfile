@@ -19,6 +19,7 @@ gem 'simple_form', '>= 3.0.0.rc'
 gem 'gibbon'
 gem 'thin'
 gem 'zurb-foundation'
+gem 'modernizr'
 
 group :development do
   gem 'sqlite3'
