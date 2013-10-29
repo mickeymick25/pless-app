@@ -44,18 +44,24 @@
 
   <body class="<%= controller_name %> <%= action_name %>">
     <div id="container" class="container">
+      <!-- Header
+      ================================================== -->
       <header>
         <%= render 'layouts/navigation' %>
         <%= render 'layouts/messages' %>
       </header>
-
+      <!-- Main
+      ================================================== -->
       <div id="main" role="main">
           <%= yield %>
       </div>
-
+      <!-- Footer
+      ================================================== -->
       <footer>
-       
+       <%= render 'layouts/google_analytics' %>
       </footer>
-    </div> <!--! end of #container -->
+    </div>
+  <!-- End of Body
+  ================================================== -->
   </body>
 </html>
