@@ -16,13 +16,13 @@
       <ul class="right">
 
         <!-- <li class="divider"></li> -->
-        <li><a href="#">Presentation</a></li>
+        <li> <%= link_to 'Présentation' %> </li>
         <!-- <li class="divider"></li> -->
-        <li><a href="#">Essayer</a></li>
+        <li> <%= link_to 'Essayer' %> </li>
         <!-- <li class="divider"></li> -->
-        <li><a href="#">Applications</a></li>
+        <li> <%= link_to 'Applications' %> </li>
         <!-- <li class="divider"></li> -->
-        <li><a href="#">Blog</a></li>
+        <li> <%= link_to 'Blog' %> </li>
         <!-- <li class="divider"></li> -->
 
         <% if user_signed_in? %>
@@ -30,7 +30,7 @@
           <a href="#"><%= current_user.name %></a>
           
           <ul class="dropdown">
-            <li><a href="">Dashboard</a></li>
+            <li><%= link_to 'Dashboard' %></li>
             <li><%= link_to 'Account', edit_user_registration_path %></li>
 
             <% if current_user.has_role? :admin %>
