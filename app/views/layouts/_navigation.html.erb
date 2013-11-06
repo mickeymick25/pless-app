@@ -44,11 +44,9 @@
 
         </li>
         <% else %>
-
-          <li><%= link_to "S'identifier", new_user_session_path %></li>
-          <!-- <li class="divider"></li> -->
           <li><%= link_to "S'inscrire", new_user_registration_path %></li>
-
+          <!-- <li class="divider"></li> -->
+          <li><%= link_to "S'identifier", new_user_session_path %></li>
         <% end %>
       </ul>
     </section>
