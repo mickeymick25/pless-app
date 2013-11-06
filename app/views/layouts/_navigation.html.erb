@@ -39,15 +39,15 @@
             <% end %>
 
             <!-- <li class="divider"></li> -->
-            <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
+            <li><%= link_to "Se déconnecter", destroy_user_session_path, :method=>'delete' %></li>
           </ul>
 
         </li>
         <% else %>
 
-          <li><%= link_to 'Login', new_user_session_path %></li>
+          <li><%= link_to "S'identifier", new_user_session_path %></li>
           <!-- <li class="divider"></li> -->
-          <li><%= link_to 'Sign up', new_user_registration_path %></li>
+          <li><%= link_to "S'inscrire", new_user_registration_path %></li>
 
         <% end %>
       </ul>
