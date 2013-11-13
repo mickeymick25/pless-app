@@ -1,4 +1,4 @@
-/*Load Foundation Icons*/
+/* Load Foundation Icons */
 @font-face {
 	font-family: '[set]Foundicons';
 	src: url('foundicons/[set]_foundicons.eot');
@@ -6,20 +6,6 @@
 			url('foundicons/[set]_foundicons.woff') format('woff'), 
 			url('foundicons/[set]_foundicons.ttf') format('truetype'), 
 			url('foundicons/%5bset%5d_foundicons.html#[set]Foundicons') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Harbell';
-	src: url('harbell/Harbell_Personal_Use.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Intrique';
-	src: url('intrique_script/IntriqueScript_PersonalUse.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -42,7 +28,30 @@
 	text-decoration: inherit;
 }
 
-/*Begin General Styles*/
+/* Load Dedicated fonts */
+@font-face {
+	font-family: 'Harbell';
+	src: url('harbell/Harbell_Personal_Use.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Intrique';
+	src: url('intrique_script/IntriqueScript_PersonalUse.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'helvetica_Neue';
+	src: url('Helvetica_Neue_LT_Std/HelveticaNeueLTStd-Lt.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* Begin General Styles */
 .top-bar {
 	margin-bottom: 0;
 }
@@ -57,7 +66,6 @@
 	font-weight: 200;
 	font-style: normal;
 	font-size: 30px;
-	margin-left: 30px;
 }
 
 body {
@@ -70,13 +78,22 @@ body {
 }
 
 .full-row.grey {
-	background: #EFEFEF;
+	background: #f9f9f9;
+}
+
+.full-row.white {
+	background: #FFF;
+}
+.full-row.green {
+	background: #9be24d;
 }
 
 .full-row.grey.wrapper{
 	background-image: url(pless-bg.jpg);
 	background-repeat:no-repeat;
-	height: 690px;
+	background-attachment:fixed;
+	//height: 525px;
+	height: 100%;
 }
 
 .full-row.grey.wrapper_signup{
@@ -101,6 +118,33 @@ body {
 	text-shadow: 0px 0px 7px rgba(64, 64, 64, 0.75);
 }
 
+/*  Features  */
+.full-row.white.features{
+	//height: 385px;
+	height: 100%;
+}
+.photolabel{
+	color: #9d9fa2;
+	font-size: 10px;	
+}
+
+.full-row.grey.features{
+	//height: 660px;
+	height: 100%;
+}
+.full-row.green.features{
+	//height: 660px;
+	height: 100%;
+}
+.full-row.grey.trynow{
+	//height: 385px;
+	height: 100%;
+}
+.full-row.white.testimonials{
+	//height: 385px;
+	height: 100%;
+}
+
 .features {
 	text-align: center;
 }
@@ -120,34 +164,36 @@ body {
 .top-email {
 	margin-bottom: 5px;
 }
-h1 {
-	color: #312A2A;
-	font-family: "Raleway", Arial, Helvetica, Sans-serif;
-	font-weight: 400;
-	margin-bottom: 10px;
-}
+
 .logo_wrapper{
+
+	display: block;
+
 	background-image: url(logo_pless.png);
 	background-repeat:no-repeat; 
+	
 	height: 250px;
 	width: 250px;
+	
 	-webkit-filter: drop-shadow(1px 1px 1px #999);
     filter:         drop-shadow(1px 1px 1px #999); 
+
+	margin-top: 17px;
+	margin-bottom: 25px;
+	margin-left: auto;
+    margin-right: auto;
+
+
 /*
-	color: #FFF;
-	font-size: 100px;
-	font-family: "Harbell", Arial, Helvetica, Sans-serif;
-	font-weight: 100;
-	text-shadow: 0px 0px 5px rgba(64, 64, 64, 1);
+	border-width:1px;
+	border-style:dotted;
+	border-color:black;
 */
-	margin-top: 50px;
-	margin-left: 0px;
-	margin-bottom: 50px;
 }
 
-.baseline{
+.wrapper_header{
 	color: #FFF;
-	font-size: 46px;
+	font-size: 50px;
 	font-family: "Intrique", Arial, Helvetica, Sans-serif;
 	font-weight: 100;
 	margin-left: 0px;
@@ -164,6 +210,12 @@ h1 {
 	margin-bottom: 10px;
 	text-shadow: 0px 0px 5px rgba(64, 64, 64, 1);
 }
+h1 {
+	color: #312A2A;
+	font-family: "Raleway", Arial, Helvetica, Sans-serif;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
 
 .header h1 {
 	font-size: 32px;
@@ -175,16 +227,243 @@ h1 {
 
 .tour h1 {
 	text-align: center;
-	margin-top: 60px;
+	color: #9d9fa2;
+	font-family: "Intrique", Arial, Helvetica, Sans-serif;
+	font-weight: 100;
+	font-style: normal;
+	margin-top: 20px;
+}
+
+.section_title.grey h1{
+	color: #9d9fa2;
+	font-family: "helvetica_Neue", Arial, Helvetica, Sans-serif;
+	font-size: 26px;
+	font-weight: 100;
+	font-style: normal;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.section_title.white h1{
+	color: #fff;
+	font-family: "helvetica_Neue", Arial, Helvetica, Sans-serif;
+	font-size: 26px;
+	font-weight: 100;
+	font-style: normal;
+	margin-top: 50px;
+}
+
+.section_title.white ul li {
+	color: #fff;
+	font-family: "helvetica_Neue", Arial, Helvetica, Sans-serif;
+	font-size: 18px;
+	font-weight: 100;
+	font-style: normal;
 }
 
 h2 {
 	font-size: 25px;
 	color: #222;
-	font-family: "Raleway", Arial, Helvetica, Sans-serif;
+	font-family: "helvetica_Neue", Arial, Helvetica, Sans-serif;
 	font-weight: 500;
 	margin-top: 50px;
 }
+
+.full-row.grey p{
+	color: #9d9fa2;
+	font-family: "helvetica_Neue", Arial, Helvetica, Sans-serif;
+	font-weight: 100;
+}
+
+.photoboard{
+
+	background-image: url(pless-board_photoshoot.png);
+	background-repeat:no-repeat;
+
+	height: 113px;
+	width: 686px; 
+
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.photoboardUnder{
+
+	background-image: url(pless-board_photoshoot_dessous.png);
+	background-repeat:no-repeat;
+
+	height: 537px;
+	width: 138px; 
+
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.iconboard{
+
+	background-image: url(icons_features_photoshoot.png);
+	background-repeat:no-repeat;
+
+	height: 122px;
+	width: 94px;
+
+	margin-top: 50px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+
+}
+
+.plessappimage{
+	position: relative;
+	
+	background: #9be24d url(pless_apps_bg.png) no-repeat center 0px ;
+	background-position:right; 
+	background-attachment:fixed;
+
+	width: 100%;
+	height: 100%;
+
+	margin-left: auto;
+    margin-right: auto;
+
+	/*
+	border-width:1px;
+	border-style:dotted;
+	border-color:black;
+	*/
+}
+.plessappimage p{
+	margin-bottom: 50px;
+}
+
+.txt_iconboard{
+	/* txt */
+	color: #bbb;
+
+	font-family: "helvetica_Neue", Arial, Helvetica, Sans-serif;
+	font-size: 14px;
+	font-weight: 100;
+	font-style: normal;
+	text-align: center;
+}
+.txt_iconboard2{
+	/* txt */
+	color: #bbb;
+
+	font-family: "helvetica_Neue", Arial, Helvetica, Sans-serif;
+	font-size: 24px;
+	font-weight: 100;
+	font-style: normal;
+	text-align: center;
+}
+
+/* #Testimonial Section
+================================================== */
+
+.testimonial-section { padding:0px 0 0px; overflow:hidden; background:#F3F3F3; }
+.testimonial { overflow:hidden; }
+
+.testimonial-section .entry-header {
+	margin-bottom:40px;
+	text-align:center;
+}
+.testimonial_image img {
+	float:left;
+	margin-right:20px;
+	margin-bottom:20px;
+	width:75px;
+	height:75px;
+	-webkit-border-radius:50%;
+		-moz-border-radius:50%;
+			border-radius:50%;
+}
+.testimonial-name {
+	display:block;
+	margin-bottom:20px;
+	color:#58D68D;
+	font-style:italic;
+}
+/* ================================================== */
+/* #Footer
+================================================== */
+
+.footer{
+	background: #9be24d !important;
+	text-align: left !important;
+	padding:40px 0 20px;
+}
+
+.footer a {
+	color:#FFF;
+}
+
+.footer a:hover {
+	color:#FFF;
+}
+
+.footer li,a {
+	color: rgb(143,143,143);
+	list-style: none;
+	letter-spacing: 0;
+	font-size: 14px;
+}
+
+.footer h3 {
+	color:#FFFFFF;
+}
+
+.footer_header h5{
+	color: #FFF;
+	font-size: 20px;
+	font-family: "Harbell", Arial, Helvetica, Sans-serif;
+	font-weight: 100;
+	text-transform:none;
+}
+
+.footer-nav{
+	color: #F00;
+	font-size: 10px;
+	font-family: "helvetica_Neue", Arial, Helvetica, Sans-serif;
+	font-weight: 100;
+	text-transform:none;
+}
+
+.site-branding {
+	float:none;
+	display:block;
+	margin:0 auto 20px 0;	
+}
+
+.site-branding h1 {
+	font-size:30px;
+	margin:0;
+	color:#58D68D;
+	line-height:inherit;
+}
+
+.site-branding a {
+	display:block;
+	color:#58D68D;
+	line-height: inherit;
+}
+.site-branding a:hover {
+	color:#58D68D;
+}	
+
+.copyright { 
+	padding:0; 
+	margin:0; 
+	font-size:12px; 
+	color:#f9f9f9; 
+	text-transform:capitalize;
+}
+
+.mobile-copyright .copyright {
+	text-align:center;
+	margin-bottom:20px;
+}
+/* ================================================== */
 
 .features h2 {
 	margin-top: 60px;
@@ -196,8 +475,9 @@ p.main {
 }
 
 p {
+	font-family: "helvetica_Neue", Arial, Helvetica, Sans-serif;
 	font-size: 16px;
-	color: #222;
+	color: #9d9fa2;
 	letter-spacing: 0px;
 }
 
@@ -306,26 +586,6 @@ ul li {
 	position: relative;
 	top: 48px;
 //	margin-bottom: -60px;
-}
-
-.footer {
-	background: #9be24d !important;
-	text-align: left !important;
-}
-
-.footer_header h5{
-	color: #FFF;
-	font-size: 20px;
-	font-family: "Harbell", Arial, Helvetica, Sans-serif;
-	font-weight: 100;
-	//text-shadow: 0px 0px 5px rgba(64, 64, 64, 1);
-}
-
-.footer li,a {
-	color: rgb(143,143,143);
-	list-style: none;
-	letter-spacing: 0;
-	font-size: 14px;
 }
 
 h5 {

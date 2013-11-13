@@ -4,11 +4,6 @@ PlessBootstrap::Application.routes.draw do
 #	devise_for :users, :controllers => {:registrations => "registrations"}
 #	resources :users
 
-	root :to => "home#index"
-
-	resources :users
-	devise_for :users, :path => '', :path_names => {:registrations => "registrations", :sign_in => 'login', :sign_out => 'logout'}
-
 	unauthenticated do
 		root to: "home#index", as: :unauthenticated_root
 	end
@@ -20,5 +15,9 @@ PlessBootstrap::Application.routes.draw do
 	resources :dashboard, :only =>"index" do
     	get 'dashboard', to: "dashboard#index"
 	end
+	
+	root :to => "home#index"
 
+	resources :users
+	devise_for :users, :path => '', :path_names => {:registrations => "registrations", :sign_in => 'login', :sign_out => 'logout'}
 end

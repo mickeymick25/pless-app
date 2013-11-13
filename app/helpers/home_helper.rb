@@ -4,7 +4,11 @@ module HomeHelper
     end
 
     def resource
-      @resource ||= User.new
+    	@resource ||= User.new
+    end
+
+    def bookatry
+    	@bookatry ||= Message.new
     end
 
     def devise_mapping

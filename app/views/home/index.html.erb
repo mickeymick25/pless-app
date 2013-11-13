@@ -1,34 +1,253 @@
-<!-- Begin main Above the fold Header -->
-<div class="full-row grey wrapper">
+<section id="wrapper" class="wrapper-section">
+	<!-- Begin main Above the fold Header -->
+	<div class="full-row grey wrapper"> 
+	<!-- "full-row" class allows background to stretch to 100% width -->
+		<div class="row header">
+			<div class="large-10 large-centered medium-12 medium-centered small-12 small-centered columns features-intro">
+				
+				<!-- Main Heading -->
+				<div class="row">
+					<div class="logo_wrapper"></div>
 
-<!-- "full-row" class allows background to stretch to 100% width -->
-	<div class="row header">
-		<div class="large-8 medium-centered columns features-intro">
-			
-			<!-- Main Heading -->
-			<div class="large-centered medium-centered small-centered columns">
-				<div class="logo_wrapper"></div>
-				<div class="baseline">Longboard électrique intelligent, made in Paris !</div>
-				<!-- <div class="wrapper_txt">Sign up now and be inform when we launch.</div> -->
-				<div class="wrapper_txt">Inscrivez vous pour être tenu au courant du lancement ! Pas de spam, c'est promis !</div>
+					<div class="wrapper_header text-center">Longboard électrique intelligent, made in Paris !</div>
+						<!-- <div class="wrapper_txt">Sign up now and be inform when we launch.</div> -->
+					<div class="wrapper_txt text-center">Inscrivez vous pour être tenu au courant du lancement ! Pas de spam, c'est promis !</div>
+				</div>
+
+				<div class="row">
+				<!-- Email Subscribe Form -->
+					<div class="small-10 small-centered large-8 large-centered columns register_form">
+						<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
+							<div class="small-8 large-8 columns text-center">
+								<%= f.input :email,  :label => false, :autofocus => true, :placeholder => "Email" %>
+							</div>
+
+							<div class="small-4 large-4 columns text-center">
+								<%= f.button :submit, "Envoyer", :class => 'medium button success radius' %>
+							</div>
+						<% end %>
+					</div>
+				<!-- End Email Row -->
+				</div>
+
 			</div>
 
-			<!-- Email Subscribe Form -->
-			<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
-				<div class="large-8 medium-8 small-8 columns">
-					<%= f.input :email,  :label => false, :autofocus => true, :placeholder => "Email" %>
-				</div>
+		</div>
+	</div>
+</section>
+<!-- end of wrapper -->
 
-				<div class="large-4 medium-4 small-4 columns">
-					<%= f.button :submit, "Envoyer", :class => 'medium button success radius' %>
-				</div>
-			<% end %>
-			<!-- End Email Row -->
+<!-- presentation starts-->
+<section id="features" class="features-section">
+	<div class="full-row white features">
+		<div class="tour">
+			<h1>Voici <span class="brand">pless</span>, le premier longboard éléctrique intelligent connecté ! </h1>
 		</div>
 
-		<div class="large-4 hide-for-medium hide-for-small columns">
-			<%= image_tag "header-phone.png", :title => "pless app", :class => "iphone"%>
+		<div class="row">
+			
+				<div class="large-4 small-4 columns">
+					<div class="iconboard "> 
+						<p class="txt_iconboard">Automnomie</p>
+						<p class="txt_iconboard2">15km</p>
+					</div>
+				</div>
+
+				<div class="large-4 small-4 columns" >
+					<div class="iconboard "> 
+						<p class="txt_iconboard">Vitesse max</p>
+						<p class="txt_iconboard2">20km/h</p>
+					</div>
+				</div>
+
+				<div class="large-4 small-4 columns">
+					<div class="iconboard"> 
+						<p class="txt_iconboard">Recharge</p>
+						<p class="txt_iconboard2">1h30</p>
+					</div>
+				</div>
+		
+		</div>
+		
+		<div class="text-center">
+			<!--<div class="photoboard"></div>--> 
+			<%= image_tag "pless-board_photoshoot.png", :title => "pless-board" %>
+			<p class="photolabel">images non contractuelles</p>
 		</div>
 
 	</div>
-</div>
+</section>
+<!-- end of presentation-->
+
+<!-- details starts-->
+<section id="features_details" class="features_details-section">
+	<div class="full-row grey features">
+		<div class="row">
+
+			<div class="section_title grey text-right">
+				<h1>Une solution à sensations pour vos derniers kilomètres !</h1>
+			</div>
+
+			<div class="row">
+				
+				<div class="large-3 hide-for-medium-down columns photoboardUnder">
+					<!-- Picture -->		
+					<div class="photolabel">images non contractuelles</div>
+				</div>
+
+				<div class="large-9 small-10 large-uncentered medium-centered small-centered columns">
+					
+					<div class="row">
+						<div class="hide-for-small medium-2 large-2 columns text-center" > <p> <%= fa_icon "tachometer 4x", :text =>"Performance" ,:class => "text-center"%> </p> </div>
+						<div class="small-11 medium-10 large-10 columns text-left" > <p> Que vous soyez débutant ou confirmé, <span class="brand">pless</span> vous offre la possibilité de définir son comportement afin de toujours vous fournir les meilleurs sensations, celles qui vous sont adaptées ! </p> </div>
+					</div>
+					
+					
+					<div class="row">
+						<div class="hide-for-small medium-2 large-2 columns text-center" > <p> <%= fa_icon "signal 4x", :text=>"Batterie", :class => "text-center" %> </p> </div>
+						<div class="small-11 medium-10 large-10 columns text-left" > <p> D’une utilisation occasionnelle à quotidienne,  <span class="brand">pless</span> vous offre la possibilité de profiter de 10km d’automnomie. Découvrez une nouvelle facon de vous déplacer, rompez avec le quotidien et offrez vous un moment de sensation et de plaisir. </p> </div>
+					</div>
+					
+					<div class="row">
+						<div class="hide-for-small medium-2 large-2 columns text-center" > <p> <%= fa_icon "cloud 4x", :text=>"Environnement", :class => "text-center" %> </p> </div>
+						<div class="small-11 medium-10 large-10 columns text-left" > <p> Améliorer votre impact environnemental !  <span class="brand">pless</span> est léger, moins de 6kg et facilement transportable grâce à son sac à dos dédié. Laissez la voiture au garage et prenez les transports en commun, <span class="brand">pless</span> s’occupe de vos derniers kilomètres !</p> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="text-right">
+				<%= image_tag "wifi_logo.png", :title => "wifi inside" %>
+				<%= image_tag "bluetooth_logo.png", :title => "bluetooth inside" %>
+			</div>
+		</div>
+
+	</div>
+</section>
+<!-- end of detail-->
+
+<!-- digital features-->
+<section id="apps" class="apps-section">
+	<div class="full-row green features">
+		<div class="plessappimage">
+			<div class="row">
+				
+				<div class="section_title white text-left">
+					<h1>Des applications dédiées pour synchroniser vos données.</h1>
+					<p></p>
+				</div>
+
+				<div class="section_title white text-left">
+					<ul >
+						<li>En un instant, visualisez l’état de votre batterie et de votre périmètre d’action !</li>
+						<li>Définissez le comportement de pless, que vous soyez débutant ou confirmé !</li>
+						<li>Mesurez vos trajets et revivez les dans votre Dashboard !</li>
+						<li>Sauvegardez vos trajets préférés et partagez les !</li>
+						<li>Invitez vos amis et créez votre team !</li>
+						<li>Ajoutez photos et vidéos à chacune de vos sorties !</li>
+						<li>Partagez vos sessions sur les réseaux sociaux !</li>
+					</ul>	
+				</div>
+			</div>
+			<p></p>
+			<div class="row text-left">
+				<%= image_tag "apple_appstore.png", :title => "apple appstore" %>
+				<%= image_tag "android_appstore.png", :title => "android appstore" %>
+			</div>
+			<p></p>
+		</div>
+	</div>
+</section>
+<!-- end of digital-->
+
+<!-- trynow! starts-->
+<section id="trynow" class="trynow-section">
+	<div class="full-row grey trynow">
+		<div class="row">
+			<div class="section_title grey text-right">
+				<!-- <h1>Réservez maintenant, votre essai en région parisienne.</h1>-->
+				<h1>Réservez bientôt, votre essai en région parisienne.</h1>
+				<p>Nous vous contacterons au plus vite afin de convenir avec vous d’un rendez-vous !</p>
+			</div>
+			
+			<div>
+				<%= simple_form_for("/bookatry", :as => "bookatry", :url => "#", :html => {:class => 'form-vertical' }) do |f| %>
+					<div class="small-10 small-centered large-3 large-uncentered columns">
+						<%= f.input :firstname,  :label => false, :autofocus => false, :placeholder => "Votre prénom" %>
+					</div>
+
+					<div class="small-10 small-centered large-3 large-uncentered columns">
+						<%= f.input :name,  :label => false, :autofocus => false, :placeholder => "Votre nom" %>
+					</div>
+
+					<div class="small-10 small-centered large-3 large-uncentered columns">
+						<%= f.input :tel,  :label => false, :autofocus => false, :placeholder => "Téléphone" %>
+					</div>
+
+					<div class="small-10 small-centered large-3 large-uncentered columns">
+						<%= f.input :email,  :label => false, :autofocus => false, :placeholder => "Email" %>
+					</div>
+						
+					<div class="small-10 small-centered large-3 large-offset-3 large-uncentered columns">
+						<%= f.button :submit, "Soumettre", :class => 'medium button success disabled' %>
+					</div>
+				<% end %>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- end of trynow-->
+
+<!-- testimonial section -->
+<section id="testimonial" class="testimonial-section">
+	<div class="full-row white testimonials">
+		<div class="row">
+			<div class="section_title grey text-left">
+				<h1>Ils aiment <span class="brand">pless</span> !</h1>
+			</div>
+
+			<div class="row">
+			 	<!-- testimonial 1 -->
+	            <div class="large-4 columns">
+	            	<figure class="testimonial_image">
+	            		<%= image_tag "testimonial-1.jpg", :title => "testimonial_image" %>
+	                </figure>
+	                
+	            	<div class="testimonial">
+	            	<p>"Plus facile à utiliser qu’un skate classique ! Je n’ai plus à pousser, fini les pertes d’équilibre ! En plus, la board a de la patate! J’adore !"</p>
+	                <span class="testimonial-name">- Isabelle</span>
+	            	</div>
+	            </div>
+	            <!-- close testimonial -->
+	            
+	            <!-- testimonial 2 -->
+	            <div class="large-4 columns">
+	            	<figure class="testimonial_image">
+	            	<%= image_tag "testimonial-2.jpg", :title => "testimonial_image" %>
+	                </figure>
+	                
+	            	<div class="testimonial">
+	                <p>"Avec pless, le quartier de la défense devient un vrai terrain de jeu."</p>
+	                <span class="testimonial-name">- Matthieu</span>
+	            	</div>
+	            </div>
+	            <!-- close testimonial -->
+	            
+	            <!-- testimonial 3 -->
+	            <div class="large-4 columns">
+	            	<figure class="testimonial_image">
+	                <%= image_tag "testimonial-3.jpg", :title => "testimonial_image" %>
+	                </figure>
+	                
+	            	<div class="testimonial">
+	                <p>"Port du casque obligatoire... maintenant je comprends pourquoi ! Mais quel plaisir, j’ai l’impression de dévaller des pentes en snowboard !"</p>
+	                <span class="testimonial-name">- Alexandre</span>
+	            	</div>  
+	            </div>
+	        </div>
+		</div>
+	</div>
+</section>
+<!-- close testimonial section -->

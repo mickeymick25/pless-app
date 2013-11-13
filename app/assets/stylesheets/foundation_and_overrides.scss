@@ -1296,21 +1296,21 @@ $topbar-link-bg-hover: darken($topbar-bg-color, 3%);
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: bold;
 // $topbar-dropdown-label-font-size: em-calc(10);
-// $topbar-dropdown-label-bg: lighten($topbar-bg-color, 5%);
+$topbar-dropdown-label-bg: lighten($topbar-bg-color, 5%);
 
 // Top menu icon styles
 
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: em-calc(13);
 // $topbar-menu-link-weight: bold;
-// $topbar-menu-link-color: #bbb;
-// $topbar-menu-icon-color: #bbb;
-// $topbar-menu-link-color-toggled: #888;
-// $topbar-menu-icon-color-toggled: #888;
+$topbar-menu-link-color: #bbb;
+$topbar-menu-icon-color: #bbb;
+$topbar-menu-link-color-toggled: #bbb;
+$topbar-menu-icon-color-toggled: #bbb;
 
 // Transitions and breakpoint styles
 
-// $topbar-transition-speed: 300ms;
+$topbar-transition-speed: 300ms;
 // $topbar-breakpoint: 940 !default; // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})";
 

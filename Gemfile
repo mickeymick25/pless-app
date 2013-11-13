@@ -20,6 +20,7 @@ gem 'gibbon'
 gem 'thin'
 gem 'zurb-foundation'
 gem 'modernizr'
+gem "font-awesome-rails"
 
 group :development do
   gem 'sqlite3'
