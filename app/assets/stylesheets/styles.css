@@ -228,7 +228,8 @@ h1 {
 .tour h1 {
 	text-align: center;
 	color: #9d9fa2;
-	font-family: "Intrique", Arial, Helvetica, Sans-serif;
+	font-family: "helvetica_Neue", Arial, Helvetica, Sans-serif;
+	font-size: 26px;
 	font-weight: 100;
 	font-style: normal;
 	margin-top: 20px;
@@ -357,6 +358,75 @@ h2 {
 	font-style: normal;
 	text-align: center;
 }
+/*================================================== */
+
+/* #Social Newtwork Section
+================================================== */
+
+.social-section .parallax-header {
+	padding-bottom:0px !important;
+}
+.social-section {
+	padding-bottom:0px;
+}
+.social-network {
+	list-style:none;
+	margin:0;
+	text-align:center;
+}
+.social-network li {
+	text-align:center;
+}
+.social-link {
+	margin-bottom:40px;
+	display:block;
+}
+.js .social-link {
+	opacity:0;
+}
+.social-link,
+.social-link:visited,
+.social-link:hover,
+.social-link:active {
+	color:#FFFFFF;
+}
+.social-link:hover .social-icon {
+	background:rgb(46, 204, 113);
+	background:rgba(46, 204, 113, 0.85);
+}
+.social-icon {
+	display:block;
+	width:100px;
+	height:100px;
+	line-height:100px;
+	text-align:center;
+	margin:0 auto 20px auto;
+	background:rgba(255, 255, 255, 0.15);
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	-webkit-transform: translateZ(0);
+	-webkit-transition:0.2s background linear;
+		-moz-transition:0.2s background linear;
+			transition:0.2s background linear;
+}
+.social-icon i {	
+	line-height:100px;
+}
+.social-title,
+.social-info {
+	display:block;
+}
+.social-title {
+	font-size:10px;
+	color:#2ecc71;
+	letter-spacing:1px;
+	text-transform:uppercase;
+}
+.social-info {
+	font-size:15px;
+}
+/*================================================== */
 
 /* #Testimonial Section
 ================================================== */
@@ -385,6 +455,7 @@ h2 {
 	font-style:italic;
 }
 /* ================================================== */
+
 /* #Footer
 ================================================== */
 

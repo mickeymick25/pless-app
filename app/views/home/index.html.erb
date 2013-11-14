@@ -95,7 +95,7 @@
 					<div class="photolabel">images non contractuelles</div>
 				</div>
 
-				<div class="large-9 small-10 large-uncentered medium-centered small-centered columns">
+				<div class="large-9 large-uncentered medium-centered small-10 small-centered columns">
 					
 					<div class="row">
 						<div class="hide-for-small medium-2 large-2 columns text-center" > <p> <%= fa_icon "tachometer 4x", :text =>"Performance" ,:class => "text-center"%> </p> </div>
@@ -190,7 +190,7 @@
 					</div>
 						
 					<div class="small-10 small-centered large-3 large-offset-3 large-uncentered columns">
-						<%= f.button :submit, "Soumettre", :class => 'medium button success disabled' %>
+						<%= f.button :submit, "Soumettre", :class => 'medium button success disabled radius' %>
 					</div>
 				<% end %>
 			</div>
@@ -200,10 +200,45 @@
 </section>
 <!-- end of trynow-->
 
+<!-- Social section starts -->
+<section id="social-section" class="social-section">
+	<div class="full-row darkgrey">
+		<div class="row">
+			<div class="large-12 large-centered">
+		        <header class="section_title grey text-center">
+		        	<h1><span>Rejoignez-nous.</span></h1>
+		            <p>Que se soit pour participer au développement du produit, faire part de vos remarques, vous tenir informés de l'avancement de projet... La team est connectée, rejoingnez-nous !</p>
+		    	</header>
+			</div>
+
+			 <!-- social network -->
+            <ul class="social-network">
+            	<li class="large-6 small-10 columns facebook">
+                	<a class="social-link" href="http://www.facebook.com/plessboards" target="_blank">
+                    <span class="social-icon"><%= fa_icon "facebook 4x", :class => "text-center"%></span>
+                    <span class="social-title">Facebook</span>
+                    <span class="social-info">Engager la conversation</span>
+                    </a>
+                </li>
+
+                <li class="large-6 small-10 columns twitter">
+                	<a class="social-link" href="http://twitter.com/plessboards" target="_blank">
+                    <span class="social-icon"><%= fa_icon "twitter 4x", :class => "text-center"%></span>
+                    <span class="social-title">Twitter</span> 
+                    <span class="social-info">Disposer des dernières nouvelles</span>
+                    </a>
+                </li>
+            </ul><!-- close social network -->
+		</div>
+	</div>
+</section>
+<!-- end of Social section -->
+
 <!-- testimonial section -->
 <section id="testimonial" class="testimonial-section">
 	<div class="full-row white testimonials">
 		<div class="row">
+			
 			<div class="section_title grey text-left">
 				<h1>Ils aiment <span class="brand">pless</span> !</h1>
 			</div>
