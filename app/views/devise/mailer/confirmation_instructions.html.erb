@@ -133,8 +133,9 @@
 												<h4 class="secondary">
 													<strong><singleline label="Title"><i class="fa fa-quote-left fa-2x pull-left fa-border">Amazing to have you on board !</i></singleline></strong>
 												</h4>
+												
 												<multiline label="Description" align="left">
-													
+
 													<p>Welcome <%= @resource.email %>!</p>
 
 													<p>We're pleased to invite you to try <%= link_to ENV["DOMAIN"], root_url %>.</p>
@@ -143,6 +144,7 @@
 
 													<p align="center"><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
 												</multiline>
+
 											</td>
 										</tr>
 									</table>
@@ -180,6 +182,7 @@
 								You’re receiving this because you’re an awesome plessboards.com customer or subscribed via <a href="http://www.plessboards.com/" style="color:#a6a6a6;text-decoration:underline;">our site</a>.
 							</p>
 							
+							<!--
 							<p style="color:#c9c9c9;font-size:12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
 								<preferences style="color:#3ca7dd;text-decoration:none;">
 									<strong>Edit your subscription</strong>
@@ -189,7 +192,7 @@
 									<strong>Unsubscribe instantly</strong>
 								</unsubscribe>
 							</p>
-						
+							-->
 						</td>
 
 						<td align="right" width="220" style="color:#a6a6a6;font-size:12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-shadow: 0 1px 0 #ffffff;" valign="top" class="hide">
