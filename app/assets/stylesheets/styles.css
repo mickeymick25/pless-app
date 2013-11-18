@@ -92,8 +92,9 @@ body {
 	background-image: url(pless-bg.jpg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
-	//height: 525px;
+	
 	height: 100%;
+	width: 100%;
 }
 
 .full-row.grey.wrapper_signup{

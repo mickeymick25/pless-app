@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
 	    	:id => ENV['MAILCHIMP_LIST_ID'], 
 	    	:email => {:email => self.email},
 	    	:double_optin => false, 
-	    	:merge_vars => {:FNAME => self.name, :LNAME => 'Last Name'},
+	    	:merge_vars => {:NAME => self.name},
 	    	:update_existing => true,
 	      	:send_welcome => true
 	    	})
@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
 	      :id => ENV['MAILCHIMP_LIST_ID'],
 			:email => {:email => self.email},
 	    	:double_optin => false, 
-	    	:merge_vars => {:FNAME => self.name, :LNAME => 'Last Name'},
+	    	:merge_vars => {:NAME => self.name},
 	    	:update_existing => true,
 	      	:send_welcome => true
 	    	})
