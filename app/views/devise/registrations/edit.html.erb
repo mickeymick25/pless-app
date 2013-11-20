@@ -4,7 +4,8 @@
 	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
 	  <%= f.error_notification %>
 	  <%= display_base_errors resource %>
-	  <%= f.input :name, :label => false, :placeholder => "Your name", :autofocus => true %>
+	  <%= f.input :firstname,  :label => false, :autofocus => true, :placeholder => "Your firstname", :required => true %>
+	  <%= f.input :name, :label => false, :placeholder => "Your name", :required => true%>
 	  <%= f.input :email, :label => false, :placeholder => "Email", :required => true %>
 	  <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :label => false,:placeholder => "Password", :required => false %>
 	  <%= f.input :password_confirmation, :label => false, :placeholder => "Password confirmation", :required => false %>

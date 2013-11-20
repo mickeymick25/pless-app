@@ -2,10 +2,10 @@
     <h3>Users</h3>
 
     <table>
-      
       <thead>
         <tr>
-          <th width="200">Username</th>
+          <th width="200">Firstname</th>
+          <th width="200">Lastname</th>
           <th width="200">Email</th>
           <th width="200">Registered</th>
           <th width="200">Role</th>
@@ -17,6 +17,7 @@
       <tbody>
       <% @users.each do |user| %>
         <tr>
+          <td><%= link_to user.firstname, user %></td>
           <td><%= link_to user.name, user %></td>
           <td><%= user.email %></td>
           <td><%= user.created_at.to_date %></td>

@@ -27,7 +27,7 @@
 
         <% if user_signed_in? %>
         <li class="has-dropdown not-click">
-          <a href="#"><%= current_user.name %></a>
+          <a href="#"><%= current_user.firstname+ ' '+current_user.name %></a>
           
           <ul class="dropdown">
            <!-- <li><%= link_to 'Dashboard', "dashboard" %></li> -->

@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     end
   end
 
-    def invite
+  def invite
     authorize! :invite, @user, :message => 'Not authorized as an administrator.'
     @user = User.find(params[:id])
     @user.send_confirmation_instructions

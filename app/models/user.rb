@@ -17,10 +17,12 @@ class User < ActiveRecord::Base
 	    	:id => ENV['MAILCHIMP_LIST_ID'], 
 	    	:email => {:email => self.email},
 	    	:double_optin => false, 
-	    	:merge_vars => {:NAME => self.name},
+	    	:merge_vars => {:FNAME => self.firstname, :LNAME => self.name},
 	    	:update_existing => true,
 	      	:send_welcome => true
 	    	})
+
+	    Rails.logger.info("=========> #{self.firstname} & #{self.name}")
 
 	    Rails.logger.info("Subscribed #{self.email} to MailChimp") if result
 		rescue Gibbon::MailChimpError => e
@@ -33,13 +35,13 @@ class User < ActiveRecord::Base
 	      :id => ENV['MAILCHIMP_LIST_ID'],
 			:email => {:email => self.email},
 	    	:double_optin => false, 
-	    	:merge_vars => {:NAME => self.name},
+	    	:merge_vars => {:FNAME => self.firstname, :LNAME => self.name},
 	    	:update_existing => true,
 	      	:send_welcome => true
 	    	})
 	    
 	    Rails.logger.info("Unsubscribed #{self.email} from MailChimp") if result
-	  rescue Gibbon::MailChimpError => e
+	  	rescue Gibbon::MailChimpError => e
 	    Rails.logger.info("MailChimp unsubscribe failed for #{self.email}: " + e.message)
 	end
 end
