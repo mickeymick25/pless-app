@@ -44,7 +44,13 @@
 }
 
 @font-face {
-	font-family: 'helvetica_Neue';
+	font-family: 'helvetica_Neue_light';
+	src: url('Helvetica_Neue_LT_Std/HelveticaNeueLTStd-UltLt.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Helvetica_Neue';
 	src: url('Helvetica_Neue_LT_Std/HelveticaNeueLTStd-Lt.otf');
 	font-weight: normal;
 	font-style: normal;
@@ -99,9 +105,10 @@ body {
 .full-row.grey.wrapper{
 	background-image: url(pless-bg.jpg);
 	background-repeat:no-repeat;
-	background-attachment:fixed;
+	//background-attachment:fixed;
 	
 	height: 100%;
+	//height: 600px;
 	width: 100%;
 }
 
@@ -187,7 +194,7 @@ body {
 	-webkit-filter: drop-shadow(1px 1px 1px #999);
     filter:         drop-shadow(1px 1px 1px #999); 
 
-	margin-top: 17px;
+	margin-top: 60px;
 	margin-bottom: 25px;
 	margin-left: auto;
     margin-right: auto;
@@ -246,7 +253,7 @@ h1 {
 
 .section_title.grey h1{
 	color: #9d9fa2;
-	font-family: "helvetica_Neue", Arial, Helvetica, Sans-serif;
+	font-family: "helvetica_Neue_light", Arial, Helvetica, Sans-serif;
 	font-size: 26px;
 	font-weight: 100;
 	font-style: normal;
@@ -256,7 +263,7 @@ h1 {
 
 .section_title.white h1{
 	color: #fff;
-	font-family: "helvetica_Neue", Arial, Helvetica, Sans-serif;
+	font-family: "helvetica_Neue_light", Arial, Helvetica, Sans-serif;
 	font-size: 26px;
 	font-weight: 100;
 	font-style: normal;

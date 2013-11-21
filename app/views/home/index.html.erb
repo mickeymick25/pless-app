@@ -3,10 +3,9 @@
 	<div class="full-row grey wrapper"> 
 	<!-- "full-row" class allows background to stretch to 100% width -->
 		<div class="row header">
-			<div class="large-10 large-centered medium-12 medium-centered small-12 small-centered columns features-intro">
-				
 				<!-- Main Heading -->
 				<div class="row">
+					
 					<div class="logo_wrapper"></div>
 
 					<div class="wrapper_header text-center">Longboard électrique intelligent, made in Paris !</div>
@@ -16,9 +15,9 @@
 
 				<div class="row">
 				<!-- Email Subscribe Form -->
-					<div class="small-10 small-centered large-8 large-centered columns register_form">
+					<div class="register_form large-10 small-12 columns">
 						<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
-							<div class="small-8 large-8 columns text-center">
+							<div class="small-8 large-5 large-offset-3 columns text-center">
 								<%= f.input :email,  :label => false, :autofocus => true, :placeholder => "Email" %>
 							</div>
 
@@ -29,7 +28,6 @@
 					</div>
 				<!-- End Email Row -->
 				</div>
-			</div>
 		</div>
 	</div>
 </section>
