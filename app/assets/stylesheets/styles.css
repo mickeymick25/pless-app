@@ -407,8 +407,8 @@ h2 {
 	color:#FFFFFF;
 }
 .social-link:hover .social-icon {
-	background:rgb(46, 204, 113);
-	background:rgba(46, 204, 113, 0.85);
+	background:rgb(155, 226, 77);
+	background:rgba(155, 226, 77, 0.85);
 }
 .social-icon {
 	display:block;
@@ -435,7 +435,7 @@ h2 {
 }
 .social-title {
 	font-size:10px;
-	color:#2ecc71;
+	color:#9be24d;
 	letter-spacing:1px;
 	text-transform:uppercase;
 }
@@ -466,9 +466,15 @@ h2 {
 }
 .testimonial-name {
 	display:block;
-	margin-bottom:20px;
-	color:#58D68D;
+	margin-bottom:50px;
+	color:#9be24d;
 	font-style:italic;
+}
+
+.testimonial-icon {
+	//color: #494747;
+	color: #efefef;
+	
 }
 /* ================================================== */
 
