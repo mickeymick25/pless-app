@@ -1,18 +1,18 @@
 <div class="row">
   <div class="small-4 small-centered columns">
-	<h2>Edit <%= resource_name.to_s.humanize %></h2>
+	<h2>Modification du compte: <%= resource_name.to_s.humanize %></h2>
 	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
 	  <%= f.error_notification %>
 	  <%= display_base_errors resource %>
-	  <%= f.input :firstname,  :label => false, :autofocus => true, :placeholder => "Your firstname", :required => true %>
-	  <%= f.input :name, :label => false, :placeholder => "Your name", :required => true%>
-	  <%= f.input :email, :label => false, :placeholder => "Email", :required => true %>
-	  <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :label => false,:placeholder => "Password", :required => false %>
-	  <%= f.input :password_confirmation, :label => false, :placeholder => "Password confirmation", :required => false %>
-	  <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :label => false, :placeholder => "Current password", :required => true %>
-	  <%= f.button :submit, 'Update', :class => 'medium button success radius' %>
+	  <%= f.input :firstname,  :label => false, :autofocus => true, :placeholder => "Prénom", :required => true %>
+	  <%= f.input :name, :label => false, :placeholder => "Nom", :required => true%>
+	  <%= f.input :email, :label => false, :placeholder => "Adresse e-mail", :required => true %>
+	  <%= f.input :password, :autocomplete => "off", :hint => "Si vous ne souhaitez pas changer votre mot de passe, laissez ce champs vide", :label => false,:placeholder => "Mot de passe", :required => false %>
+	  <%= f.input :password_confirmation, :label => false, :placeholder => "confirmation du mot de passe", :required => false %>
+	  <%= f.input :current_password, :hint => "Mot de passe nécessaire afin d'appliquer les changements", :label => false, :placeholder => "Mot de passe actuel", :required => true %>
+	  <%= f.button :submit, 'Mettre à jour', :class => 'medium button success radius' %>
 	<% end %>
 	<h3>Cancel my account</h3>
-	<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete , :class => "medium button success alert"%></p>
+	<p>Unhappy? <%= link_to "Supprimer mon compte", registration_path(resource_name), :data => { :confirm => "Etes-vous sûr ?" }, :method => :delete , :class => "medium button success alert"%></p>
   </div>
 </div>

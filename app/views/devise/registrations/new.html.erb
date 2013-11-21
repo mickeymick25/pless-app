@@ -3,16 +3,16 @@
 
 	<div class="row">
 	  <div class="large-4 medium-6 small-12 large-centered small-centered columns">
-		<h2>Sign up</h2>
+		<h2>Inscription</h2>
 		<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
 		  <%= f.error_notification %>
 		  <%= display_base_errors resource %>
-		  <%= f.input :firstname,  :label => false, :required => true, :autofocus => true, :placeholder => "Your firstname" %>
-		  <%= f.input :name,  :label => false, :required => true, :placeholder => "Your name" %>
-		  <%= f.input :email,  :label => false, :required => true, :placeholder => "Email address" %>
-		  <%= f.input :password,  :label => false, :required => true, :placeholder => "Password" %>
-		  <%= f.input :password_confirmation,  :label => false, :required => true, :placeholder => "Password confirmation" %>
-		  <%= f.button :submit, 'Get started', :class => 'button success full_width' %>
+		  <%= f.input :firstname,  :label => false, :required => true, :autofocus => true, :placeholder => "Prénom" %>
+		  <%= f.input :name,  :label => false, :required => true, :placeholder => "Nom" %>
+		  <%= f.input :email,  :label => false, :required => true, :placeholder => "adresse e-mail" %>
+		  <%= f.input :password,  :label => false, :required => true, :placeholder => "mot de passe" %>
+		  <%= f.input :password_confirmation,  :label => false, :required => true, :placeholder => "confirmez votre mot de passe" %>
+		  <%= f.button :submit, 'Inscription', :class => 'button success full_width' %>
 		<% end %>
 			<div class="link_white">
 

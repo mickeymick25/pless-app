@@ -115,10 +115,12 @@
 		</div>
 		
 		<div class="row">
-			<div class="text-right">
-				<%= image_tag "wifi_logo.png", :title => "wifi inside" %>
-				<%= image_tag "bluetooth_logo.png", :title => "bluetooth inside" %>
-			</div>
+			<div class="large-10 small-10 small-centered columns">
+				<div class="text-right">
+					<%= image_tag "wifi_logo.png", :title => "wifi inside" %>
+					<%= image_tag "bluetooth_logo.png", :title => "bluetooth inside" %>
+				</div>
+			<div class="large-10 small-10 columns">
 		</div>
 
 	</div>
@@ -130,28 +132,31 @@
 	<div class="full-row green features">
 		<div class="plessappimage">
 			<div class="row">
-				
-				<div class="section_title white text-left">
-					<h1>Des applications dédiées pour synchroniser vos données.</h1>
-					<p></p>
-				</div>
+				<div class="large-10 columns">	
+					<div class="section_title white text-left">
+						<h1>Des applications dédiées pour synchroniser vos données.</h1>
+						<p></p>
+					</div>
 
-				<div class="section_title white text-left">
-					<ul >
-						<li>En un instant, visualisez l’état de votre batterie et de votre périmètre d’action !</li>
-						<li>Définissez le comportement de pless, que vous soyez débutant ou confirmé !</li>
-						<li>Mesurez vos trajets et revivez les dans votre Dashboard !</li>
-						<li>Sauvegardez vos trajets préférés et partagez les !</li>
-						<li>Invitez vos amis et créez votre team !</li>
-						<li>Ajoutez photos et vidéos à chacune de vos sorties !</li>
-						<li>Partagez vos sessions sur les réseaux sociaux !</li>
-					</ul>	
+					<div class="section_title white text-left">
+						<ul >
+							<li>En un instant, visualisez l’état de votre batterie et de votre périmètre d’action !</li>
+							<li>Définissez le comportement de pless, que vous soyez débutant ou confirmé !</li>
+							<li>Mesurez vos trajets et revivez les dans votre Dashboard !</li>
+							<li>Sauvegardez vos trajets préférés et partagez les !</li>
+							<li>Invitez vos amis et créez votre team !</li>
+							<li>Ajoutez photos et vidéos à chacune de vos sorties !</li>
+							<li>Partagez vos sessions sur les réseaux sociaux !</li>
+						</ul>	
+					</div>
 				</div>
 			</div>
 			<p></p>
 			<div class="row text-left">
-				<%= image_tag "apple_appstore.png", :title => "apple appstore" %>
-				<%= image_tag "android_appstore.png", :title => "android appstore" %>
+				<div class="large-10 small-10 columns">	
+					<%= image_tag "apple_appstore.png", :title => "apple appstore" %>
+					<%= image_tag "android_appstore.png", :title => "android appstore" %>
+				</div>
 			</div>
 			<p></p>
 		</div>
@@ -163,36 +168,37 @@
 <section id="trynow" class="trynow-section">
 	<div class="full-row grey trynow">
 		<div class="row">
-			<div class="section_title grey text-right">
-				<!-- <h1>Réservez maintenant, votre essai en région parisienne.</h1>-->
-				<h1>Réservez bientôt, votre essai en région parisienne.</h1>
-				<p>Nous vous contacterons au plus vite afin de convenir avec vous d’un rendez-vous !</p>
+			<div class="large-10 small-10 small-centered columns">	
+				<div class="section_title grey text-right">
+					<!-- <h1>Réservez maintenant, votre essai en région parisienne.</h1>-->
+					<h1>Réservez bientôt, votre essai en région parisienne.</h1>
+					<p>Nous vous contacterons au plus vite afin de convenir avec vous d’un rendez-vous !</p>
+				</div>
+				
+				<div>
+					<%= simple_form_for("/bookatry", :as => "bookatry", :url => "#", :html => {:class => 'form-vertical' }) do |f| %>
+						<div class="small-10 small-centered large-3 large-uncentered columns">
+							<%= f.input :firstname,  :label => false, :autofocus => false, :placeholder => "Votre prénom" %>
+						</div>
+
+						<div class="small-10 small-centered large-3 large-uncentered columns">
+							<%= f.input :name,  :label => false, :autofocus => false, :placeholder => "Votre nom" %>
+						</div>
+
+						<div class="small-10 small-centered large-3 large-uncentered columns">
+							<%= f.input :tel,  :label => false, :autofocus => false, :placeholder => "Téléphone" %>
+						</div>
+
+						<div class="small-10 small-centered large-3 large-uncentered columns">
+							<%= f.input :email,  :label => false, :autofocus => false, :placeholder => "Email" %>
+						</div>
+							
+						<div class="small-10 small-centered large-3 large-offset-3 large-uncentered columns">
+							<%= f.button :submit, "Soumettre", :class => 'medium button success disabled radius' %>
+						</div>
+					<% end %>
+				</div>
 			</div>
-			
-			<div>
-				<%= simple_form_for("/bookatry", :as => "bookatry", :url => "#", :html => {:class => 'form-vertical' }) do |f| %>
-					<div class="small-10 small-centered large-3 large-uncentered columns">
-						<%= f.input :firstname,  :label => false, :autofocus => false, :placeholder => "Votre prénom" %>
-					</div>
-
-					<div class="small-10 small-centered large-3 large-uncentered columns">
-						<%= f.input :name,  :label => false, :autofocus => false, :placeholder => "Votre nom" %>
-					</div>
-
-					<div class="small-10 small-centered large-3 large-uncentered columns">
-						<%= f.input :tel,  :label => false, :autofocus => false, :placeholder => "Téléphone" %>
-					</div>
-
-					<div class="small-10 small-centered large-3 large-uncentered columns">
-						<%= f.input :email,  :label => false, :autofocus => false, :placeholder => "Email" %>
-					</div>
-						
-					<div class="small-10 small-centered large-3 large-offset-3 large-uncentered columns">
-						<%= f.button :submit, "Soumettre", :class => 'medium button success disabled radius' %>
-					</div>
-				<% end %>
-			</div>
-
 		</div>
 	</div>
 </section>
@@ -202,31 +208,32 @@
 <section id="social-section" class="social-section">
 	<div class="full-row darkgrey">
 		<div class="row">
-			<div class="large-12 large-centered">
+			<div class="large-12 large-centered columns">
 		        <header class="section_title grey text-center">
 		        	<h1><span>Rejoignez-nous.</span></h1>
 		            <p>Participer au développement du produit, faire part de vos remarques, vous tenir informés de l'avancement de projet... La team est connectée, rejoingnez-nous !</p>
 		    	</header>
-			</div>
+			
 
-			 <!-- social network -->
-            <ul class="social-network">
-            	<li class="large-6 small-10 columns facebook">
-                	<a class="social-link" href="http://www.facebook.com/plessboards" target="_blank">
-                    <span class="social-icon"><%= fa_icon "facebook 4x", :class => "text-center"%></span>
-                    <span class="social-title">Facebook</span>
-                    <span class="social-info">Engager la conversation</span>
-                    </a>
-                </li>
+			 	<!-- social network -->
+	            <ul class="social-network">
+	            	<li class="large-6 large-uncentered small-10 small-centered columns facebook">
+	                	<a class="social-link" href="http://www.facebook.com/plessboards" target="_blank">
+	                    <span class="social-icon"><%= fa_icon "facebook 4x", :class => "text-center"%></span>
+	                    <span class="social-title">Facebook</span>
+	                    <span class="social-info">Engager la conversation</span>
+	                    </a>
+	                </li>
 
-                <li class="large-6 small-10 columns twitter">
-                	<a class="social-link" href="http://twitter.com/plessboards" target="_blank">
-                    <span class="social-icon"><%= fa_icon "twitter 4x", :class => "text-center"%></span>
-                    <span class="social-title">Twitter</span> 
-                    <span class="social-info">Disposer des dernières nouvelles</span>
-                    </a>
-                </li>
-            </ul><!-- close social network -->
+	                <li class="large-6 large-uncentered small-10 small-centered columns twitter">
+	                	<a class="social-link" href="http://twitter.com/plessboards" target="_blank">
+	                    <span class="social-icon"><%= fa_icon "twitter 4x", :class => "text-center"%></span>
+	                    <span class="social-title">Twitter</span> 
+	                    <span class="social-info">Disposer des dernières nouvelles</span>
+	                    </a>
+	                </li>
+	            </ul><!-- close social network -->
+	       	</div>
 		</div>
 	</div>
 </section>
@@ -237,49 +244,53 @@
 	<div class="full-row white testimonials">
 		<div class="row">
 			
-			<div class="section_title grey text-left">
-				<h1>Ils aiment <span class="brand">pless</span> !</h1>
-			</div>
+			<div class="large-12 small-12 small-centered columns">
+				
+				<div class="section_title grey text-left">
+					<h1>Ils aiment <span class="brand">pless</span> !</h1>
+				</div>
 
-			<div class="row">
-			 	<!-- testimonial 1 -->
-	            <div class="large-4 columns">
-	            	<figure class="testimonial_image">
-	            		<%= image_tag "testimonial-1.jpg", :title => "testimonial_image_Isabelle" %>
-	                </figure>
-	                
-	            	<div class="testimonial">
-	            	<p>"Plus facile à utiliser qu’un skate classique ! Je n’ai plus à pousser, fini les pertes d’équilibre ! En plus, la board a de la patate! J’adore !"</p>
-	                <span class="testimonial-name">- Isabelle</span>
-	            	</div>
-	            </div>
-	            <!-- close testimonial -->
-	            
-	            <!-- testimonial 2 -->
-	            <div class="large-4 columns">
-	            	<figure class="testimonial_image">
-	            		<%= image_tag "testimonial-2.jpg", :title => "testimonial_image_Matthieu" %>
-	                </figure>
-	                
-	            	<div class="testimonial">
-	                <p>"Avec pless, le quartier de la défense devient un vrai terrain de jeu."</p>
-	                <span class="testimonial-name">- Matthieu</span>
-	            	</div>
-	            </div>
-	            <!-- close testimonial -->
-	            
-	            <!-- testimonial 3 -->
-	            <div class="large-4 columns">
-	            	<figure class="testimonial_image">
-	                	<%= image_tag "testimonial-3.jpg", :title => "testimonial_image_Alexandre" %>
-	                </figure>
-	                
-	            	<div class="testimonial">
-	                <p>"Port du casque obligatoire... maintenant je comprends pourquoi ! Mais quel plaisir, j’ai l’impression de dévaller des pentes en snow!"</p>
-	                <span class="testimonial-name">- Alexandre</span>
-	            	</div>  
-	            </div>
-	        </div>
+				<div class="row">
+				 	<!-- testimonial 1 -->
+		            <div class="large-4 columns">
+		            	<figure class="testimonial_image">
+		            		<%= image_tag "testimonial-1.jpg", :title => "testimonial_image_Isabelle" %>
+		                </figure>
+		                
+		            	<div class="testimonial">
+		            	<p>"Plus facile à utiliser qu’un skate classique ! Je n’ai plus à pousser, fini les pertes d’équilibre ! En plus, la board a de la patate! J’adore !"</p>
+		                <span class="testimonial-name">- Isabelle</span>
+		            	</div>
+		            </div>
+		            <!-- close testimonial -->
+		            
+		            <!-- testimonial 2 -->
+		            <div class="large-4 columns">
+		            	<figure class="testimonial_image">
+		            		<%= image_tag "testimonial-2.jpg", :title => "testimonial_image_Matthieu" %>
+		                </figure>
+		                
+		            	<div class="testimonial">
+		                <p>"Avec pless, le quartier de la défense devient un vrai terrain de jeu."</p>
+		                <span class="testimonial-name">- Matthieu</span>
+		            	</div>
+		            </div>
+		            <!-- close testimonial -->
+		            
+		            <!-- testimonial 3 -->
+		            <div class="large-4 columns">
+		            	<figure class="testimonial_image">
+		                	<%= image_tag "testimonial-3.jpg", :title => "testimonial_image_Alexandre" %>
+		                </figure>
+		                
+		            	<div class="testimonial">
+		                <p>"Port du casque obligatoire... maintenant je comprends pourquoi ! Mais quel plaisir, j’ai l’impression de dévaller des pentes en snow!"</p>
+		                <span class="testimonial-name">- Alexandre</span>
+		            	</div>  
+		            </div>
+		        </div>
+		    </div>
+
 		</div>
 	</div>
 </section>
