@@ -68,6 +68,14 @@
 	font-size: 30px;
 }
 
+.brandgrey{
+	color: #9d9fa2;
+	font-family: "Harbell";
+	font-weight: 200;
+	font-style: normal;
+	font-size: 26px;
+}
+
 body {
 	color: #222;
 	font-family: "Raleway", Arial, Helvetica, Sans-serif;
