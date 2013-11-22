@@ -44,4 +44,8 @@ class User < ActiveRecord::Base
 	  	rescue Gibbon::MailChimpError => e
 	    Rails.logger.info("MailChimp unsubscribe failed for #{self.email}: " + e.message)
 	end
+
+	def user_params
+    	params.require(:user).permit(:email, :firstname, :lastname)
+  	end
 end
