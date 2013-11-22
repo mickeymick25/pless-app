@@ -103,6 +103,7 @@ body {
 }
 
 .full-row.grey.wrapper{
+  
 	background-image: url(pless-bg.jpg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
@@ -450,6 +451,10 @@ h2 {
 .testimonial-section { padding:0px 0 0px; overflow:hidden; background:#F3F3F3; }
 .testimonial { overflow:hidden; }
 
+.testimonial p{
+	text-align: justify;
+}
+
 .testimonial-section .entry-header {
 	margin-bottom:40px;
 	text-align:center;
@@ -475,6 +480,44 @@ h2 {
 	//color: #494747;
 	color: #efefef;
 	
+}
+/* ================================================== */
+
+/* #Form CSS
+================================================== */
+input::-webkit-input-placeholder {
+   //color: #9d9fa2;
+   //color: #9be24d;
+   font-family: "helvetica_Neue_light", Arial, Helvetica, Sans-serif;
+   font-size: 20px;
+   font-weight: 200;
+   font-style: normal;
+   text-transform: none;
+}
+
+input::-moz-placeholder {
+	color: #9d9fa2;
+	font-family: "helvetica_Neue_light", Arial, Helvetica, Sans-serif;
+	font-size: 20px;
+	font-weight: 200;
+	font-style: normal;
+	text-transform: none;
+}
+input:-moz-placeholder {   /* Older versions of Firefox */
+	color: #9d9fa2;
+	font-family: "helvetica_Neue_light", Arial, Helvetica, Sans-serif;
+	font-size: 20px;
+	font-weight: 200;
+	font-style: normal;
+	text-transform: none;
+}
+input:-ms-input-placeholder { 
+	color: #9d9fa2;
+	font-family: "helvetica_Neue_light", Arial, Helvetica, Sans-serif;
+	font-size: 20px;
+	font-weight: 200;
+	font-style: normal;
+	text-transform: none;
 }
 /* ================================================== */
 

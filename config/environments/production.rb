@@ -15,7 +15,7 @@ PlessBootstrap::Application.configure do
   config.action_controller.perform_caching = true
 
   # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => 'www.plesboards.com' }
+  config.action_mailer.default_url_options = { :host => 'www.plessboards.com' }
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.perform_deliveries = true
