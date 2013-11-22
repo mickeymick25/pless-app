@@ -19,5 +19,10 @@ PlessBootstrap::Application.routes.draw do
 	root :to => "home#index"
 
 	resources :users
-	devise_for :users, :path => '', :path_names => {:registrations => "registrations", :sign_in => 'login', :sign_out => 'logout'}
+	devise_for :users, :path => '', :path_names => {
+		:registrations => "registrations", 
+		:sign_in => 'login', 
+		:sign_out => 'logout', 
+		:sign_up => 'register'
+	}
 end
