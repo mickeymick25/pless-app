@@ -10,17 +10,13 @@
 -->
 
   <head> 
-    
+    <%= render 'layouts/header' %>
     <%= csrf_meta_tags %>
      
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
     
-    <div id="header">
-      <%= render 'layouts/header' %>
-    </div> 
-
     <div id="container" class="container">
       <!-- Header
       ================================================== -->
