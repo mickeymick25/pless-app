@@ -10,7 +10,6 @@
 -->
 
   <head>
-
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
@@ -39,9 +38,7 @@
     <%= javascript_include_tag "application" %>
     
     <%= csrf_meta_tags %>
-    <%= yield(:head) %>
-
-    
+    <%= content_for?(:head) ? yield(:head) : '' %>
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
